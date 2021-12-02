@@ -22,8 +22,8 @@ function Product({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
     const data: Product[] = posts;
     return (
         <ul>
-        {posts.map((post) => (
-        <li style={{
+        {posts.map((post,index) => (
+        <li key={index} style={{
             listStyle: "none",
         }}>
             <h3>{post.id}</h3>
